@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+
+
+<script>
+let item={
+	Fruites:['grapes','bannana','apple','strawberry'],
+	liquid:['water','ice'],
+	holder:['cone','cup','stick'],
+	topping:['chocolate','nuts']
+}
+
+
+
+
+
+
+
+let value1=new Promise((resolve,reject)=>{
+	
+	let shop=true;
+	
+	if(shop){
+		
+		resolve()
+	}
+	else{
+		reject(`shop closed`)
+	}
+	
+})
+
+
+value1.then(()=>{
+	
+	setTimeout(()=>{
+		
+	     document.write(`${item.Fruites[0]} was selected`)
+	},2000)
+	
+})
+.then(()=>{
+	
+	setTimeout(()=>{
+		document.write('<br>')
+		document.write(`Production start`)
+	},3000)
+	
+})
+.then(()=>{
+	
+	setTimeout(()=>{
+		document.write('<br>')
+		document.write(`Fruites has been chopped`)
+	},5000)
+	
+})
+.then(()=>{
+	
+	setTimeout(()=>{
+		document.write('<br>')
+		document.write(`${item.liquid[1]} was added`)
+	},7000)
+	
+})
+.then(()=>{
+	
+	setTimeout(()=>{
+		document.write('<br>')
+		document.write(`Machine start`)
+	},9000)
+	
+})
+.then(()=>{
+	
+	setTimeout(()=>{
+		document.write('<br>')
+		document.write(`ice cream placed on the ${item.holder[2]}`)
+	},11000)
+	
+})
+.then(()=>{
+	
+	setTimeout(()=>{
+		document.write('<br>')
+		document.write(`${item.topping[1]} as toppings`)
+	},13000)
+	
+})
+.then(()=>{
+	
+	setTimeout(()=>{
+		document.write('<br>')
+		document.write(`Serve the ice cream`)
+	},15000)
+	
+})
+
+.catch((msg)=>{
+	
+	document.write(`${msg} coustemer left`)
+})
+</script>
+</body>
+</html>
